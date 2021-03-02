@@ -1,13 +1,13 @@
-
 <p>
-  ADD NEW NOTE
+	ADD NEW NOTE
 </p>
 
-  <input type="text" [(ngModel)]="txtJudul"/><br/>
-  <input type="text" [(ngModel)]="txtIsi"/><br/>
-  <input type="date" [(ngModel)]="txtTgl"/><br/>
+<input type="text" [(ngModel)]="txtJudul"/><br/><br/>
+<input type="text" [(ngModel)]="txtIsi"/><br/><br/>
+<input type="date" [(ngModel)]="txtTgl"/><br/><br/>
 
-  <button (click)="AddNote()">Add Note</button>
-  
-  
-  
+<button style="background:yellow;" (click)="AddNote()">Add Note</button>
+<button style="margin-left:15px;background:pink;" (click)="GoToDetail()">Detail Note</button>
+<br/><br/>{{statusAdd}}
+<router-outlet>
+</router-outlet>

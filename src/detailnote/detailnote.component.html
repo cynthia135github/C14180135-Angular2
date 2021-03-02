@@ -1,0 +1,9 @@
+<p>
+	DETAIL NOTES
+</p>
+<p *ngFor="let jdl of notesJudul; let i = index">
+	{{notesJudul[i]}} ~ {{notesIsi[i]}} ~ {{notesTgl[i]}}
+	<button style="background:pink;" (click)="fav()">Favorite</button>
+</p>
+
+<button style="background:pink;" (click)="GoToFav()">Favorite Note</button>
