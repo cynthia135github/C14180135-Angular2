@@ -23,6 +23,8 @@ export class AppComponent {
       this.notesTgl[this.jumlahdata] = this.txtTgl;*/
       this.globalvar.addNew(this.txtJudul, this.txtIsi, this.txtTgl);
       this.statusAdd = "Sukses Add New Note !";
+      this.txtJudul = "";
+      this.txtIsi = "";
     } else {
       alert("Input tidak boleh kosong !");
     }
@@ -30,5 +32,9 @@ export class AppComponent {
 
   GoToDetail() {
     this.router.navigate(["/detailnote"]);
+  }
+
+  GoToFav() {
+    this.router.navigate(["/favorite"]);
   }
 }

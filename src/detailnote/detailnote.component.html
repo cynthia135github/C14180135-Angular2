@@ -1,17 +1,21 @@
 <p>
 	DETAIL NOTES
 </p>
-<div class="row" *ngFor="let a of arrNote; let i = index">
-  <div class="col-md-3">
-    <img *ngIf="a[3] == 0" (click)="fav(i)" src="https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png" style="width: 100px; height: 100px;" alt="image">
+<div *ngFor="let a of arrNote; let i = index">
+	<div style="float:left; width:50%;">
+		{{a[0]}} / {{a[1]}} / {{a[2]}}
+	</div>
 
-    <img *ngIf="a[3] == 1" (click)="fav(i)" src="https://upload.wikimedia.org/wikimedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/240px-Heart_coraz%C3%B3n.svg.png" style="width: 100px; height: 100px;" alt="image">
-    
-  </div>
-  <div class="col-md-9">
-    {{a[0]}} - {{a[1]}} - {{a[2]}}
-  </div>
-	
-</div>
+	<div style="float:left; width:15%;margin-left:10px;">
+		<img *ngIf="a[3] == 0" (click)="fav(i)" src="https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png" style="width: 20px; height: 20px;" alt="image">
 
-<button style="background:pink;" (click)="GoToFav()">Go to Favorite Note</button>
+		<img *ngIf="a[3] == 1" (click)="fav(i)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/240px-Heart_coraz%C3%B3n.svg.png" style="width: 20px; height: 20px;" alt="image">
+
+  </div>
+
+		<div style="clear:both"></div>
+
+	</div>
+
+	<br/><br/>
+	<button style="background:pink;" (click)="GoToFav()">Go to Favorite Note</button>

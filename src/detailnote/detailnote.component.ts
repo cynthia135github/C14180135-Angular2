@@ -16,7 +16,13 @@ export class DetailnoteComponent implements OnInit {
 
   ngOnInit() {}
 
-  fav(id: number) {}
+  fav(id: number) {
+    if (this.globalvar.arrNotes[id][3] == 0) {
+      this.globalvar.arrNotes[id][3] = 1;
+    } else if (this.globalvar.arrNotes[id][3] == 1) {
+      this.globalvar.arrNotes[id][3] = 0;
+    }
+  }
 
   GoToFav() {
     this.router.navigate(["/favorite"]);

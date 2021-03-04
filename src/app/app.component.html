@@ -7,7 +7,8 @@
 <input type="date" [(ngModel)]="txtTgl"/><br/><br/>
 
 <button style="background:yellow;" (click)="AddNote()">Add Note</button>
-<button style="margin-left:15px;background:pink;" (click)="GoToDetail()">Detail Note</button>
+<button style="margin-left:15px;background:lightblue;" (click)="GoToDetail()">Detail Note</button>
+<button style="margin-left:15px;background:pink;" (click)="GoToFav()">Go to Favorite Note</button>
 <br/><br/>{{statusAdd}}
 <router-outlet>
 </router-outlet>
