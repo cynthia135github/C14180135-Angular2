@@ -1,21 +1,22 @@
 <p style="font-weight: bold;">
 	MY FAVORITE NOTES
 </p>
-<div *ngFor="let a of globalvar.arrNotes; let i = index">
+<div style="background-color:#f0c5ef;padding:5px;" *ngFor="let a of globalvar.arrNotes; let i = index">
 	<div *ngIf="a[3] == 1" style="float:left; width:50%;">
-		{{a[0]}} / {{a[1]}} / {{a[2]}}
+		{{a[0]}} / {{a[2]}}
+		<br/><br/>{{a[1]}}
 	</div>
 
-	<div style="float:left; width:15%;margin-left:10px;">
-		<img *ngIf="a[3] == 1" (click)="fav(i)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/240px-Heart_coraz%C3%B3n.svg.png" style="width: 20px; height: 20px;" alt="image">
+		<div *ngIf="a[3] == 1" style="float:left; width:15%;margin-left:10px;">
+			<img *ngIf="a[3] == 1" (click)="fav(i)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/240px-Heart_coraz%C3%B3n.svg.png" style="width: 20px; height: 20px;" alt="image">
 
   </div>
 
-		<div *ngIf="a[3] == 1" style="clear:both"></div>
+			<div *ngIf="a[3] == 1" style="clear:both"></div>
 
-		<hr *ngIf="a[3] == 1">
+			<hr *ngIf="a[3] == 1">
 
-	</div>
+		</div>
 
-	<br/><br/>
-	<button style="background:pink;" (click)="GoToDetail()">Go to Detail</button>
+		<br/><br/>
+		<button style="background:lightblue;" (click)="GoToDetail()">Go to Detail</button>
