@@ -10,31 +10,24 @@ import { GlobalvarService } from "../app/globalvar.service";
 export class FavoriteComponent implements OnInit {
   arrFavNotes = [];
   constructor(private router: Router, public globalvar: GlobalvarService) {
-    for (var i = 0; i < this.globalvar.arrNotes.length; i++) {
-      if (this.globalvar.arrNotes[i][3] == 1) {
-        this.arrFavNotes.push(this.globalvar.arrNotes[i]);
-      }
-    }
-    this.arrFavNotes = this.globalvar.arrNotes;
+    this.refreshData();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.refreshData();
+  }
 
   refreshData() {
+    this.arrFavNotes = [];
     for (var i = 0; i < this.globalvar.arrNotes.length; i++) {
       if (this.globalvar.arrNotes[i][3] == 1) {
         this.arrFavNotes.push(this.globalvar.arrNotes[i]);
       }
     }
-    this.arrFavNotes = this.globalvar.arrNotes;
   }
 
   fav(id: number) {
-    if (this.globalvar.arrNotes[id][3] == 0) {
-      this.globalvar.arrNotes[id][3] = 1;
-    } else if (this.globalvar.arrNotes[id][3] == 1) {
-      this.globalvar.arrNotes[id][3] = 0;
-    }
+    this.globalvar.arrNotes[id][3] = 0;
     this.refreshData();
   }
 
