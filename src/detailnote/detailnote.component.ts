@@ -14,6 +14,9 @@ export class DetailnoteComponent implements OnInit {
   jumlahdata: Number;
 
   constructor(private router: Router, public globalvar: GlobalvarService) {
+    this.notesJudul = [];
+    this.notesIsi = [];
+    this.notesTgl = [];
     this.notesJudul = this.globalvar.getJudul();
     this.notesIsi = this.globalvar.getIsi();
     this.notesTgl = this.globalvar.getTgl();
@@ -24,7 +27,7 @@ export class DetailnoteComponent implements OnInit {
 
   fav() {}
 
-  GoToFav(){
+  GoToFav() {
     this.router.navigate(["/favorite"]);
   }
 }

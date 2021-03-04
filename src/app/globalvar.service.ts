@@ -7,7 +7,11 @@ export class GlobalvarService {
   private tgl: Date[];
   public jumdata = 0;
 
-  constructor() {}
+  constructor() {
+    this.judul = [];
+    this.isi = [];
+    this.tgl = [];
+  }
 
   public addNew(tjudul: String, tisi: String, ttgl: Date) {
     this.judul[this.jumdata] = tjudul;
