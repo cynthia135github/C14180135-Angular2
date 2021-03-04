@@ -28,7 +28,7 @@ export class FavoriteComponent implements OnInit {
 
   fav(id: number) {
     this.globalvar.arrNotes[id][3] = 0;
-    this.refreshData();
+    //this.refreshData();
   }
 
   GoToDetail() {
