@@ -1,9 +1,9 @@
-<p>
+<p style="font-weight: bold;">
 	ADD NEW NOTE
 </p>
 
-<input type="text" [(ngModel)]="txtJudul"/><br/><br/>
-<input type="text" [(ngModel)]="txtIsi"/><br/><br/>
+<input type="text" [(ngModel)]="txtJudul" placeholder="Judul"/><br/><br/>
+<input [(ngModel)]="txtIsi" placeholder="Isi Note"/><br/><br/>
 <input type="date" [(ngModel)]="txtTgl"/><br/><br/>
 
 <button style="background:yellow;" (click)="AddNote()">Add Note</button>

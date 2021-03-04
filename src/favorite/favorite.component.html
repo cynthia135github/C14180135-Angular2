@@ -1,4 +1,4 @@
-<p>
+<p style="font-weight: bold;">
 	MY FAVORITE NOTES
 </p>
 <div *ngFor="let a of arrFavNotes; let i = index">
@@ -7,13 +7,15 @@
 	</div>
 
 	<div style="float:left; width:15%;margin-left:10px;">
-		<img *ngIf="a[3] == 0" (click)="fav(i)" src="https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png" style="width: 20px; height: 20px;" alt="image">
+		
 
 		<img *ngIf="a[3] == 1" (click)="fav(i)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/240px-Heart_coraz%C3%B3n.svg.png" style="width: 20px; height: 20px;" alt="image">
 
   </div>
 
 		<div style="clear:both"></div>
+
+		<hr>
 
 	</div>
 
