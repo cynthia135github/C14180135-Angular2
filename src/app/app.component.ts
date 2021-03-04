@@ -12,10 +12,6 @@ export class AppComponent {
   txtIsi = "";
   txtTgl: Date;
   statusAdd = "";
-  /*notesJudul : String[];
-  notesIsi : String[];
-  notesTgl : Date[];
-  jumlahdata = 0;*/
 
   constructor(private router: Router, public globalvar: GlobalvarService) {}
 

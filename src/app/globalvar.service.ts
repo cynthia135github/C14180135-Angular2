@@ -2,34 +2,22 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class GlobalvarService {
-  private judul: String[];
-  private isi: String[];
-  private tgl: Date[];
+  public arrNotes = [];
   public jumdata = 0;
 
-  constructor() {
-    this.judul = [];
-    this.isi = [];
-    this.tgl = [];
-  }
+  constructor() {}
 
   public addNew(tjudul: String, tisi: String, ttgl: Date) {
-    this.judul[this.jumdata] = tjudul;
-    this.isi[this.jumdata] = tisi;
-    this.tgl[this.jumdata] = ttgl;
-    this.jumdata++;
+    var notebaru = [];
+    notebaru[0] = tjudul;
+    notebaru[1] = tisi;
+    notebaru[2] = ttgl;
+    notebaru[3] = 0;
+
+    this.arrNotes.push(notebaru);
   }
 
-  public getJudul() {
-    return this.judul;
-  }
-  public getIsi() {
-    return this.isi;
-  }
-  public getTgl() {
-    return this.tgl;
-  }
-  public getJumlah() {
-    return this.jumdata;
+  public getAllNotes() {
+    return this.arrNotes;
   }
 }

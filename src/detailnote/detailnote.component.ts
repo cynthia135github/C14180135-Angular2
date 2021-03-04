@@ -8,24 +8,15 @@ import { GlobalvarService } from "../app/globalvar.service";
   styleUrls: ["./detailnote.component.css"]
 })
 export class DetailnoteComponent implements OnInit {
-  notesJudul: String[];
-  notesIsi: String[];
-  notesTgl: Date[];
-  jumlahdata: Number;
+  arrNote = [];
 
   constructor(private router: Router, public globalvar: GlobalvarService) {
-    this.notesJudul = [];
-    this.notesIsi = [];
-    this.notesTgl = [];
-    this.notesJudul = this.globalvar.getJudul();
-    this.notesIsi = this.globalvar.getIsi();
-    this.notesTgl = this.globalvar.getTgl();
-    this.jumlahdata = this.globalvar.getJumlah();
+    this.arrNote = this.globalvar.arrNotes;
   }
 
   ngOnInit() {}
 
-  fav() {}
+  fav(id: number) {}
 
   GoToFav() {
     this.router.navigate(["/favorite"]);
